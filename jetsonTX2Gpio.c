@@ -1,3 +1,7 @@
+/* Stolen from minhquannguyen at https://github.com/minhquannguyen/JetsonTx2/tree/057c5972266532a4b7cd3ffbcef67e82218bfc11/GPIO for educational purposes.
+ * Thanks bro.
+ */
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -234,10 +238,9 @@ gpio_get_value
         goto cleanup;
     }
 
-    // convert ascii to integer
     // originally the following: *value = val - '0';
-    //*value = GPIO_PIN_VALUE_LOW;//val - '0';
-    // if it doesn't work, change to below: 
+    // trying to convert ascii to integer
+    // changed to below: 
     
     if (val != '0') {
         *value = GPIO_PIN_VALUE_HIGH;
@@ -539,7 +542,6 @@ cleanup:
 }
 
 // Testing
-// commented out because multiple definitions of main
 /*
 int main()
 {
