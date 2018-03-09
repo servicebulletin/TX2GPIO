@@ -12,11 +12,20 @@
 
 typedef enum
 {
+    //J21 pins
     gpio298 = 298,  // Pin 31 GPIO9_MOTION_INT
     gpio388 = 388,  // pin 37 GPIO8_ALS_PROX_INT
     gpio389 = 389,  // Pin 33 GPIO11_AP_WAKE_BT
     gpio398 = 398,  // Pin 29 GPIO19_AUD_RST
-    gpio481 = 481   // Pin 18 GPIO16_MDM_WAKE_AP
+    gpio481 = 481,  // Pin 18 GPIO16_MDM_WAKE_AP
+    
+    //J26 pins
+    gpio299 = 299,  // Pin 19 CAN1_ERR
+    gpio300 = 300,  // Pin 01 CAN_WAKE
+    gpio301 = 301,  // Pin 09 CAN0_ERR
+    gpio302 = 302,  // Pin 13 CAN1_STBY
+    gpio314 = 314,  // Pin 22 SLEEP#
+    gpio488 = 488   // Pin 06 AP2MDM_READY
 } TX2_GPIO;
 
 typedef enum
